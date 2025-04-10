@@ -1,26 +1,152 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>cientifica-flix-carousel-clone</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
+    <title>Científica Flix</title>
+    <meta name="description" content="Streaming service clone for educational content" />
+    <meta name="author" content="Científica" />
 
-    <meta property="og:title" content="cientifica-flix-carousel-clone" />
-    <meta property="og:description" content="Lovable Generated Project" />
+    <meta property="og:title" content="Científica Flix" />
+    <meta property="og:description" content="Streaming service for educational content" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
+    <meta name="twitter:site" content="@cientifica_edu" />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <link rel="stylesheet" href="styles.css">
   </head>
 
   <body>
-    <div id="root"></div>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar">
+      <div class="nav-left">
+        <img src="https://www.cientifica.edu.pe/sites/default/files/logo-cientifica-blanco.svg" alt="Científica Logo" class="logo-cientifica" />
+        <div class="nav-links desktop-only">
+          <a href="#" class="navbar-link">Inicio</a>
+          <a href="#" class="navbar-link">Series</a>
+          <a href="#" class="navbar-link">Películas</a>
+          <a href="#" class="navbar-link">Novedades populares</a>
+          <a href="#" class="navbar-link">Mi lista</a>
+          <a href="#" class="navbar-link">Explorar por idiomas</a>
+        </div>
+        <div class="nav-dropdown mobile-only">
+          <span>Explorar</span>
+          <i class="icon-chevron-down"></i>
+        </div>
+      </div>
+      
+      <div class="nav-right">
+        <i class="icon-search"></i>
+        <a href="#" class="navbar-link desktop-only">Niños</a>
+        <i class="icon-bell"></i>
+        <div class="profile">
+          <img src="https://picsum.photos/id/237/32/32" alt="User Profile" class="profile-img" />
+          <i class="icon-chevron-down"></i>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main content container -->
+    <div id="app">
+      <!-- Initial state: Homepage -->
+      <div id="home-page" class="page active">
+        <!-- Hero Section -->
+        <div class="hero-section">
+          <img src="https://picsum.photos/id/1005/1920/800" alt="Featured Content" class="hero-img" />
+          <div class="hero-gradient"></div>
+          <div class="hero-content">
+            <h1 class="hero-title">Descubre la Ciencia</h1>
+            <p class="hero-text">
+              Una aventura por los hallazgos más impresionantes del mundo científico moderno. 
+              Explora con nosotros los misterios del universo.
+            </p>
+            <div class="hero-buttons">
+              <button class="button-play">
+                <i class="icon-play"></i> <span>Reproducir</span>
+              </button>
+              <button class="button-info">
+                <i class="icon-info"></i> <span>Más información</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Content Carousels -->
+        <div id="carousels-container" class="carousels-container">
+          <!-- Carousels will be added dynamically via JavaScript -->
+        </div>
+      </div>
+
+      <!-- Details page (initially hidden) -->
+      <div id="details-page" class="page">
+        <div class="content-details">
+          <div class="details-hero">
+            <img id="details-image" class="details-hero-img" src="" alt="Content Image" />
+            <div class="details-gradient"></div>
+            <div class="details-content">
+              <button id="back-button" class="back-button">
+                <i class="icon-arrow-left"></i> Volver
+              </button>
+              <h1 id="details-title" class="details-title"></h1>
+              <div class="details-meta">
+                <span id="details-rating" class="details-rating"></span>
+                <span id="details-year" class="details-year"></span>
+                <span id="details-duration" class="details-duration"></span>
+                <span id="details-genre" class="details-genre"></span>
+              </div>
+              <div class="details-actions">
+                <button class="button-play">
+                  <i class="icon-play"></i> Reproducir
+                </button>
+                <button class="button-add">
+                  <i class="icon-plus"></i> Mi Lista
+                </button>
+                <button class="button-like">
+                  <i class="icon-thumbs-up"></i>
+                </button>
+              </div>
+              <p id="details-description" class="details-description"></p>
+            </div>
+          </div>
+          
+          <div class="related-content">
+            <h2>Contenido relacionado</h2>
+            <div id="related-grid" class="related-grid">
+              <!-- Related content will be added dynamically via JavaScript -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Error/Not Found page (initially hidden) -->
+      <div id="not-found-page" class="page">
+        <div class="not-found">
+          <h1>Contenido no encontrado</h1>
+          <button class="button-primary" id="back-to-home">Volver al inicio</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="#">Preguntas frecuentes</a>
+          <span>•</span>
+          <a href="#">Centro de ayuda</a>
+          <span>•</span>
+          <a href="#">Términos de uso</a>
+        </div>
+        <p>© 2025 Científica-Flix, Inc.</p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="/src/main.tsx"></script>
+    <script src="main.js"></script>
   </body>
 </html>
