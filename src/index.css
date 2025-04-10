@@ -89,7 +89,7 @@
   }
 
   .netflix-card {
-    @apply overflow-hidden rounded bg-card relative group transition-all duration-300 hover:z-50;
+    @apply overflow-hidden rounded bg-card relative transition-all duration-300 hover:z-50;
   }
 
   .netflix-card:hover {

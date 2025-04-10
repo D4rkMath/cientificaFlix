@@ -148,7 +148,7 @@ const Index = () => {
               >
                 {generateCards(15, categoryIndex * 20).map(item => (
                   <div key={item.id} className="card-container w-[220px] md:w-[260px]">
-                    <div className="netflix-card">
+                    <div className="netflix-card group">
                       <img 
                         src={item.imageUrl} 
                         alt={item.title} 
