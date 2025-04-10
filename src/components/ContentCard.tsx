@@ -1,6 +1,7 @@
 
 import React from "react";
 import { Play, Info } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 interface ContentCardProps {
   id: number;
@@ -9,9 +10,15 @@ interface ContentCardProps {
 }
 
 const ContentCard = ({ id, title, imageUrl }: ContentCardProps) => {
+  const navigate = useNavigate();
+  
+  const handleCardClick = () => {
+    navigate(`/content/${id}`);
+  };
+
   return (
     <div className="card-container w-[220px] md:w-[260px]">
-      <div className="netflix-card group">
+      <div className="netflix-card group" onClick={handleCardClick}>
         <img 
           src={imageUrl} 
           alt={title} 
