@@ -1,3 +1,5 @@
+## ESTE CÓDIGO SI FUNCIONA, HAY Q MEJORARLO
+
 # Welcome to your Lovable project
 
 ## Project info
