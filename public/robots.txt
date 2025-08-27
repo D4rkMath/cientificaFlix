@@ -1,3 +1,6 @@
+# robots.txt para Científica Flix
+# Permite el acceso completo a todos los bots de búsqueda (Google, Bing, Twitter, Facebook) y otros
+# Asegura que el sitio sea indexado y compartible en redes sociales
 User-agent: Googlebot
 Allow: /
 
