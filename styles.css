@@ -69,7 +69,11 @@ img {
 }
 
 /* Icons */
-.icon-play:before { content: "▶"; }
+.icon-play:before { 
+  content: "▶"; 
+  font-style: normal; 
+  font-family: Arial, sans-serif; 
+}
 .icon-info:before { content: "ℹ"; }
 .icon-plus:before { content: "+"; }
 .icon-thumbs-up:before { content: "👍"; }
